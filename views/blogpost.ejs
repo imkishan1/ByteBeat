@@ -1,0 +1,29 @@
+<div class="blogImage">
+    <div class="container">
+        <div class="overlay-obj">
+            <div class="box">
+                <div class="title-date">
+                    <div class="post-date-blog-post"><%= data.createdAt.toDateString() %></div>
+                    <h2><%= data.title %></h2>
+                </div>
+                <div class="author-details">
+                    <div class="profile-image">
+                        <img src="https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" srcset="">
+                    </div> 
+                    <div class="detail">
+                    <p>Author</p>
+                    <h3>John doe</h3>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="<%= data.imageURL  %>" alt="">
+    <div class="overlay"></div>
+</div>
+<div class="container">
+<!-- <h1><%= data.title %></h1> -->
+<article class="">
+    <%= data.body %>
+</article>
+</div>
