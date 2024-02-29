@@ -6,6 +6,7 @@ const fs = require('fs');
 const axios = require('axios');
 const mongoose = require('mongoose');
 const Post = require('../models/Post');
+require('dotenv').config();
 
 // routes
 
@@ -128,7 +129,7 @@ router.get('/contact', (req, res) => {
 
 
 // Connect to MongoDB using your MongoDB URI
-mongoose.connect('mongodb+srv://kislaykishan007:fXmxSWdKdldlkIrU@cluster0.9fdm3dl.mongodb.net/', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -180,7 +181,7 @@ async function commitAndPushToGitHub(uploadedImagePath) {
         {
           auth: {
             username: 'imkishan1',
-            password: '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', // Replace with your actual GitHub token
+            password:  process.env.GITHUB_TOKEN, // Replace with your actual GitHub token
           },
         }
       );
